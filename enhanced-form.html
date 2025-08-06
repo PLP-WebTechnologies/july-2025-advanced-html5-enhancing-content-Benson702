@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Service Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f7f9;
+        }
+        header, footer {
+            background: #002b36;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        main {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        form {
+            display: grid;
+            gap: 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+        ul {
+            list-style: disc;
+            margin-top: 10px;
+        }
+        img {
+            max-width: 200px;
+            display: block;
+            margin-top: 10px;
+        }
+        video {
+            width: 300px;
+            margin-top: 10px;
+        }
+        input, select, textarea, button {
+            padding: 8px;
+            font-size: 1em;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background: #005f73;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0a9396;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Automotive Service Registration</h1>
+</header>
+
+<main>
+    <section>
+        <h2>About Our Services</h2>
+        <p>We provide professional automotive maintenance and repair for all major car brands. Fill out the form to book your next service.</p>
+
+        <h3>Popular Services:</h3>
+        <ul>
+            <li>Engine diagnostics and repair</li>
+            <li>Brake inspection and replacement</li>
+            <li>Oil change and lubrication</li>
+            <li>Wheel alignment and balancing</li>
+        </ul>
+
+        <h3>Service Packages</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Package</th>
+                    <th>Price</th>
+                    <th>Included Services</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Basic Maintenance</td>
+                    <td>$50</td>
+                    <td>Oil Change, Tire Rotation</td>
+                </tr>
+                <tr>
+                    <td>Full Service</td>
+                    <td>$150</td>
+                    <td>Full Inspection, Engine Tune-up, Brake Service</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Media Examples</h3>
+        <img src="https://images.pexels.com/photos/241316/pexels-photo-241316.jpeg?cs=srgb&dl=alloy-asphalt-auto-241316.jpg&fm=jpg" width="200">
+        <video controls>
+            <source src="https://cdn.pixabay.com/video/2020/11/07/55710-503971797_tiny.mp4" controls type="video/mp4">
+            Your browser does not support video.
+        </video>
+    </section>
+
+    <section>
+        <h2>Book a Service</h2>
+        <form action="#" method="post" autocomplete="on">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="e.g. driver@example.com" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+123456789" pattern="^\+?\d{7,15}$" required>
+
+            <label for="license">Driver's License Number:</label>
+            <input type="text" id="license" name="license" placeholder="e.g. ABC123456" required>
+
+            <label for="brand">Car Brand:</label>
+            <select id="brand" name="brand" required>
+                <option value="">Select...</option>
+                <option>Toyota</option>
+                <option>Honda</option>
+                <option>Ford</option>
+                <option>BMW</option>
+                <option>Mercedes</option>
+            </select>
+
+            <label for="model">Car Model:</label>
+            <input type="text" id="model" name="model" placeholder="e.g. Corolla" required>
+
+            <label for="year">Model Year:</label>
+            <input type="number" id="year" name="year" min="1990" max="2025" required>
+
+            <label for="fuel">Fuel Type:</label>
+            <select id="fuel" name="fuel" required>
+                <option value="">Select...</option>
+                <option>Petrol</option>
+                <option>Diesel</option>
+                <option>Electric</option>
+                <option>Hybrid</option>
+            </select>
+
+            <label>Service Type:</label>
+            <input type="radio" name="service" value="maintenance" required> Maintenance
+            <input type="radio" name="service" value="repair"> Repair
+            <input type="radio" name="service" value="inspection"> Inspection
+
+            <label>Additional Requests:</label>
+            <input type="checkbox" name="extras" value="wash"> Car Wash
+            <input type="checkbox" name="extras" value="polish"> Polishing
+            <input type="checkbox" name="extras" value="pickup"> Pick-up & Drop-off
+
+            <label for="notes">Additional Notes:</label>
+            <textarea id="notes" name="notes" placeholder="Describe the problem or request..." rows="4"></textarea>
+
+            <label for="file">Upload Vehicle Photo:</label>
+            <input type="file" id="file" name="file" accept="image/*">
+
+            <button type="submit">Submit Booking</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 AutoCare Service Center. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
